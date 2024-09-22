@@ -1,50 +1,57 @@
 /* General reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: rgb(131,58,180);
-    background: linear-gradient(170deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);    color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background: rgb(131,58,180);
+  background: linear-gradient(170deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    display: flex;
-    width: 95%;
-    max-width: 1800px;
-    height: 90vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    overflow: hidden;
+  display: grid; /* Use grid layout */
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  grid-template-areas: 
+      "logo-image social-media"
+      "location store-hours-container";
+  gap: 20px; /* Space between grid items */
+  width: 95%;
+  max-width: 1800px;
+  height: auto; /* Allow height to adjust */
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.left-column {
-  flex: 1;
+.logo-image {
+  grid-area: logo-image; /* Assign grid area */
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  padding: 20px; /* Add some padding if needed */
-  height: 100%;
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
+  padding: 20px; /* Padding around the logo */
 }
 
 .logo-image img {
-  /* max-width: 100%; Adjust the logo size as needed */
-  height: 800px;; /* Maintain aspect ratio */
-  justify-content: center;
+  max-width: 100%; /* Prevent overflow */
+  max-height: 800px; /* Maintain aspect ratio */
+  height: auto; /* Allow height to adjust */
 }
 
 .social-media {
+  grid-area: social-media; /* Assign grid area */
   display: flex; /* Use flexbox for icons */
   justify-content: center; /* Center the icons horizontally */
-  margin-top: 20px; /* Add space between logo and icons */
+  align-items: center; /* Center icons vertically */
+  padding: 20px; /* Padding for social media section */
 }
 
 .social-media a {
@@ -52,72 +59,22 @@ body {
 }
 
 .social-media img {
-  height: 85px; /* Lock the height to 150px */
+  height: 85px; /* Icon size */
   width: auto; /* Maintain aspect ratio */
 }
 
-  /* Optional: add a gradient shadow on hover for the social media icons */
-  .social-media a:hover img {
-    filter: drop-shadow(0 0 10px gold);
-  }
-
-
-.right-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    /*background-color: rgba(255, 0, 0, 0.6);*/ /* Red with some transparency */
+/* Right column */
+.location {
+  grid-area: location; /* Assign grid area */
+  padding: 20px; /* Padding for location section */
 }
-
-.right-column div {
-    margin: 20px 0;
-    width: 100%;
-  }
-  
-.location, .store-hours-container {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.store-hours-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-
-.location iframe {
-  border-radius: 5%;  
-  border: 0;
-    width: 100%;
-    max-width: 550px;
-    height: 500px;
-    justify-content: flex-end;
-}
-
-  
-  
-  .business-hours ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-  }
-  
-
-
-
-
-/* Latest Store hours using google template */
 
 .store-hours-container {
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  margin: 0 auto;
-  text-align: left;
-  justify-content: flex-end;
+  grid-area: store-hours-container; /* Assign grid area */
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+  padding: 20px;
+  border-radius: 5%;
+  max-width: 550px;
 }
 
 h2 {
@@ -142,7 +99,7 @@ h2 {
 }
 
 .store-hours-table .hours {
-  color: #b5b5b5; /* Lighter grey to distinguish from day names */
+  color: #b5b5b5; /* Lighter grey */
 }
 
 .store-hours-table tr {
@@ -153,30 +110,20 @@ h2 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Optional: adjust background color */
-.store-hours-container {
-  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
-  padding: 20px;
-  border-radius: 5%;
-  max-width: 550px;
-}
-
-
-
 /********* MOBILE ********/
 @media (max-width: 768px) {
   .container {
-      flex-direction: column; /* Stack columns vertically */
-      height: auto; /* Allow container to expand based on content */
-  }
-
-  .left-column, .right-column {
-      width: 100%; /* Full width on mobile */
-      padding: 10px; /* Reduce padding */
+      grid-template-columns: 1fr; /* One column layout */
+      grid-template-areas: 
+          "logo-image"
+          "social-media"
+          "store-hours-container"
+          "location"; /* Updated order for mobile */
   }
 
   .logo-image img {
-      height: 400px; /* Adjust logo size for mobile */
+      max-height: 400px; /* Adjust logo size for mobile */
+      height: auto; /* Maintain aspect ratio */
   }
 
   .social-media img {
@@ -190,10 +137,7 @@ h2 {
   .store-hours-container {
       padding: 15px; /* Reduce padding */
   }
-}
 
-
-@media (max-width: 768px) {
   h2 {
       font-size: 20px; /* Smaller font size for headings */
   }
@@ -201,10 +145,4 @@ h2 {
   .store-hours-table td {
       font-size: 14px; /* Smaller font size for table */
   }
-}
-
-
-.logo-image img, .social-media img {
-  max-width: 100%; /* Prevent overflow */
-  height: auto; /* Maintain aspect ratio */
 }
