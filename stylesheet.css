@@ -160,3 +160,51 @@ h2 {
   border-radius: 5%;
   max-width: 550px;
 }
+
+
+
+/********* MOBILE ********/
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack columns vertically */
+      height: auto; /* Allow container to expand based on content */
+  }
+
+  .left-column, .right-column {
+      width: 100%; /* Full width on mobile */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .logo-image img {
+      height: 400px; /* Adjust logo size for mobile */
+  }
+
+  .social-media img {
+      height: 60px; /* Adjust icon size for mobile */
+  }
+
+  .location iframe {
+      height: 300px; /* Adjust map height for mobile */
+  }
+
+  .store-hours-container {
+      padding: 15px; /* Reduce padding */
+  }
+}
+
+
+@media (max-width: 768px) {
+  h2 {
+      font-size: 20px; /* Smaller font size for headings */
+  }
+
+  .store-hours-table td {
+      font-size: 14px; /* Smaller font size for table */
+  }
+}
+
+
+.logo-image img, .social-media img {
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Maintain aspect ratio */
+}
