@@ -113,7 +113,12 @@ h2 {
 /********* MOBILE ********/
 @media (max-width: 640px) {
   .container {
-      grid-template-columns: 1fr; /* One column layout */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    
+    
+    grid-template-columns: 1fr; /* One column layout */
       grid-template-areas: 
           "logo-image"
           "social-media"
@@ -121,7 +126,6 @@ h2 {
           "location"; /* Updated order for mobile */
       justify-items: center;
       padding: 10px;
-      max-width: 90%;
   }
 
   .logo-image img {
@@ -134,7 +138,9 @@ h2 {
   }
 
   .location iframe {
-      height: 200px; /* Adjust map height for mobile */
+      width: 100%;
+      height: auto;  
+    /* height: 200px; Adjust map height for mobile */
   }
 
   .store-hours-container {
@@ -147,5 +153,10 @@ h2 {
 
   .store-hours-table td {
       font-size: 12px; /* Smaller font size for table */
+  }
+
+  .container, .logo-image, .social-media, .location, .store-hours-container {
+    padding: 5px;
+    margin: 0;
   }
 }
