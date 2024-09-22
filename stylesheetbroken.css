@@ -1,0 +1,170 @@
+/* CSS Variables for Reuse */
+:root {
+    --color-text: #fff;
+    --color-container: linear-gradient(to right bottom, rgba(255, 184, 142, 0.44), rgba(255, 255, 255, 0.5));
+    --color-list: rgba(234, 87, 83, 0.7);
+  }
+  
+  /* General reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(170deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    color: var(--color-text);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  /* Left Column */
+  .left-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-column img {
+    max-width: 150%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  /* Right Column */
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .right-column div {
+    margin: 20px 0;
+  }
+  
+  .social-media img {
+    width: 50px;
+    margin: 0 10px;
+  }
+  
+  .location a {
+    color: gold;
+    text-decoration: underline;
+  }
+  
+  /* .business-hours ul {
+    list-style: none;
+    text-align: left;
+  }
+   */
+  .social-media a:hover img {
+    filter: drop-shadow(0 0 10px gold);
+  }
+  
+  /* Store Hours Styling */
+  .store-hours {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .store-hours li {
+    margin: 5px 0;
+    font-size: 1.2em;
+  }
+  
+  .store-hours li strong {
+    color: gold; /* highlight the day abbreviation */
+  }
+  
+  /* Additional Styles */
+  /* html {
+    font-size: 62.5%;
+  } */
+  
+  /* body {
+    font-size: 1.6rem;
+    place-items: center;
+    background: linear-gradient(170deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    font-family: Rockwell, "Courier New", Courier, Georgia, Times, "Times New Roman", serif;
+  } */
+  
+  .business-hours {
+    width: 40vw;
+    padding: 1rem;
+    position: relative;
+    border-radius: 3rem;
+    background: var(--color-container);
+  }
+  
+  .business-hours::before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+  }
+  
+  .business-hours::after {
+    content: "";
+    bottom: 0rem;
+    right: -10rem;
+    width: 40rem;
+    height: 40rem;
+    margin-bottom: -25rem;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 185, 142, 0.6);
+  }
+  
+  .business-hours h1 {
+    padding: 6rem 0;
+    text-align: center;
+    color: var(--color-text);
+    box-shadow: 0 7px 2rem #ea5753;
+    background: rgba(234, 87, 83, 0.7);
+  }
+  
+  .store-hours ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    counter-reset: my-counter;
+  }
+  
+  .store-hours ol li {
+    width: 40rem;
+    text-align: center;
+    color: var(--color-text);
+    border-radius: 3rem;
+    background: var(--color-list);
+    counter-increment: my-counter;
+    padding: 1.1rem 1.5rem;
+  }
+  
+  .store-hours ol li::before {
+    content: counter(my-counter) ". ";
+  }
+  

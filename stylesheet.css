@@ -1,0 +1,162 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(131,58,180);
+    background: linear-gradient(170deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Add some padding if needed */
+  height: 100%;
+}
+
+.logo-image img {
+  /* max-width: 100%; Adjust the logo size as needed */
+  height: 550px;; /* Maintain aspect ratio */
+  justify-content: center;
+}
+
+.social-media {
+  display: flex; /* Use flexbox for icons */
+  justify-content: center; /* Center the icons horizontally */
+  margin-top: 20px; /* Add space between logo and icons */
+}
+
+.social-media a {
+  margin: 0 10px; /* Add horizontal spacing between icons */
+}
+
+.social-media img {
+  height: 85px; /* Lock the height to 150px */
+  width: auto; /* Maintain aspect ratio */
+}
+
+  /* Optional: add a gradient shadow on hover for the social media icons */
+  .social-media a:hover img {
+    filter: drop-shadow(0 0 10px gold);
+  }
+
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    /*background-color: rgba(255, 0, 0, 0.6);*/ /* Red with some transparency */
+}
+
+.right-column div {
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+.location, .store-hours-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.store-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.location iframe {
+  border-radius: 5%;  
+  border: 0;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    justify-content: flex-end;
+}
+
+  
+  
+  .business-hours ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+
+
+
+
+/* Latest Store hours using google template */
+
+.store-hours-container {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: flex-end;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.store-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.store-hours-table td {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.store-hours-table .day {
+  font-weight: bold;
+  color: #fff;
+}
+
+.store-hours-table .hours {
+  color: #b5b5b5; /* Lighter grey to distinguish from day names */
+}
+
+.store-hours-table tr {
+  border-bottom: 1px solid #333; /* Subtle underline for rows */
+}
+
+.store-hours-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: adjust background color */
+.store-hours-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+}
