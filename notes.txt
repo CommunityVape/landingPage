@@ -1,6 +1,0 @@
-Web Tools analyzing store info on google.
-
-<div jsname="xQjRM"> ==$0
-    <div class="sATSHe">
-        <div>
-            <div class="wDYxhc" ---> address block
