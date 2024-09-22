@@ -18,7 +18,7 @@ body {
 .container {
     display: flex;
     width: 95%;
-    max-width: 1200px;
+    max-width: 1800px;
     height: 90vh;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
@@ -37,7 +37,7 @@ body {
 
 .logo-image img {
   /* max-width: 100%; Adjust the logo size as needed */
-  height: 550px;; /* Maintain aspect ratio */
+  height: 800px;; /* Maintain aspect ratio */
   justify-content: center;
 }
 
@@ -66,7 +66,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     /*background-color: rgba(255, 0, 0, 0.6);*/ /* Red with some transparency */
@@ -78,7 +78,7 @@ body {
   }
   
 .location, .store-hours-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -93,8 +93,8 @@ body {
   border-radius: 5%;  
   border: 0;
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 550px;
+    height: 500px;
     justify-content: flex-end;
 }
 
@@ -157,6 +157,6 @@ h2 {
 .store-hours-container {
   background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
   padding: 20px;
-  border-radius: 10px;
-  max-width: 350px;
+  border-radius: 5%;
+  max-width: 550px;
 }
