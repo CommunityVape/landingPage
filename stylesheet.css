@@ -119,30 +119,33 @@ h2 {
           "social-media"
           "store-hours-container"
           "location"; /* Updated order for mobile */
+      justify-items: center;
+      padding: 10px;
+      max-width: 90%;
   }
 
   .logo-image img {
-      max-height: 400px; /* Adjust logo size for mobile */
+      max-height: 300px; /* Adjust logo size for mobile */
       height: auto; /* Maintain aspect ratio */
   }
 
   .social-media img {
-      height: 60px; /* Adjust icon size for mobile */
+      height: 50px; /* Adjust icon size for mobile */
   }
 
   .location iframe {
-      height: 300px; /* Adjust map height for mobile */
+      height: 200px; /* Adjust map height for mobile */
   }
 
   .store-hours-container {
-      padding: 15px; /* Reduce padding */
+      padding: 10px; /* Reduce padding */
   }
 
   h2 {
-      font-size: 20px; /* Smaller font size for headings */
+      font-size: 18px; /* Smaller font size for headings */
   }
 
   .store-hours-table td {
-      font-size: 14px; /* Smaller font size for table */
+      font-size: 12px; /* Smaller font size for table */
   }
 }
